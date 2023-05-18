@@ -15,7 +15,7 @@ Deployment:
 
 * 🔲 [github actions](https://github.com/actions) for CI/CD
 * ✔️ [docker](https://docker.com) for building containers
-* 🔲 [twine](https://twine.readthedocs.io/en/latest/) for publishing to pypi or private repositories
+* ✔️ [twine](https://twine.readthedocs.io/en/latest/) for publishing to pypi or private repositories
 * 🔲 [gcloud](https://cloud.google.com/sdk/gcloud) for publishing to private repositories
 
 ## 📦 Installation
@@ -103,16 +103,18 @@ docker tag quantready/quantready-base gcr.io/<your-project>/quantready-base
 ```bash
 # Build the package
 poetry build
-twine upload dist/*
-
+poetry run twine upload dist/*
 ```
+
+Get `PYPI_API_TOKEN` from <https://pypi.org/manage/account/token/>
+And set it as a github secret <https://github.com/><username>/<repo>/settings/secrets/actions
 
 ### Publish to private repository
 
 ```bash
 # Build the package
 poetry build
-twine upload --repository-url https://pypi.yourdomain.com dist/*
+poetry run twine upload --repository-url https://pypi.yourdomain.com dist/*
 
 ```
 
