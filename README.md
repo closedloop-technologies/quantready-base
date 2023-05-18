@@ -6,9 +6,10 @@ Publish public or private python libraries - using the modern python stack
 
 Clean Code:
 
-* 🔲 [poetry](https://python-poetry.org/) for dependency management
-* 🔲 [pre-commit](https://pre-commit.com/) hooks for code formatting, linting, and testing
-* 🔲 [unittest](https://docs.python.org/3/library/unittest.html) for testing
+* ✔️ [poetry](https://python-poetry.org/) for dependency management
+* ✔️ [pre-commit](https://pre-commit.com/) hooks for code formatting, linting, and testing
+* ✔️ [unittest](https://docs.python.org/3/library/unittest.html) for testing
+* ✔️ gitleaks for secrets scanning
 
 Deployment:
 
@@ -57,9 +58,9 @@ source venv/bin/activate
 poetry install
 
 # Install pre-commit hooks
-pre-commit install
+pre-commit install --install-hooks
 
-# Create a .env file
+# Create a .env file and modify it's contents
 cp .env.example .env
 
 ```
@@ -134,7 +135,7 @@ https://docs.github.com/en/actions)
 ## ✅✅✅ QuantReady Stack - Templates
 
 * [quantready](https://github.com/closedloop-technologies/quantready)
-  * CLI for creating and configuring projects and using the quantread-* templates
+  * CLI for creating and configuring projects and using the quantready-* templates
 * [quantready-base](https://github.com/closedloop-technologies/quantready)
   * This template - build and publish python libraries and docker images
 * [quantready-api](https://github.com/closedloop-technologies/quantready-api) - A template to build and deploy fastapi applications
