@@ -1,4 +1,5 @@
 .git
 env
+venv
 htmlcov
-prompt_to_code.egg-info
+*.egg-info

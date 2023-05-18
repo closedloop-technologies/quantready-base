@@ -9,12 +9,12 @@ Clean Code:
 * ✔️ [poetry](https://python-poetry.org/) for dependency management
 * ✔️ [pre-commit](https://pre-commit.com/) hooks for code formatting, linting, and testing
 * ✔️ [unittest](https://docs.python.org/3/library/unittest.html) for testing
-* ✔️ gitleaks for secrets scanning
+* ✔️ [gitleaks](https://gitleaks.io/) for secrets scanning
 
 Deployment:
 
 * 🔲 [github actions](https://github.com/actions) for CI/CD
-* 🔲 [docker](https://docker.com) for building containers
+* ✔️ [docker](https://docker.com) for building containers
 * 🔲 [twine](https://twine.readthedocs.io/en/latest/) for publishing to pypi or private repositories
 * 🔲 [gcloud](https://cloud.google.com/sdk/gcloud) for publishing to private repositories
 
@@ -89,7 +89,7 @@ publish the library to pypi or private repository as well as build the docker im
 docker build -t quantready/quantready-base .
 
 # Run the image
-docker run -it quantready/quantready-base
+docker run -it --rm quantready/quantready-base
 
 # Push the image to docker hub
 docker push quantready/quantready-base

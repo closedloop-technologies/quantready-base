@@ -17,9 +17,9 @@ class Config:
     # Add configuration variables here
     # Example:
     # MY_VAR: str = "my_value"
-    name: str
-    description: str
-    version: str
+    name: str = name
+    description: str = description
+    version: str = version
 
 
 def load_config() -> Config:
