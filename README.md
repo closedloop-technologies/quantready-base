@@ -9,13 +9,13 @@ Clean Code:
 * ✔️ [poetry](https://python-poetry.org/) for dependency management
 * ✔️ [pre-commit](https://pre-commit.com/) hooks for code formatting, linting, and testing
 * ✔️ [unittest](https://docs.python.org/3/library/unittest.html) for testing
-* ✔️ gitleaks for secrets scanning
+* ✔️ [gitleaks](https://gitleaks.io/) for secrets scanning
 
 Deployment:
 
 * 🔲 [github actions](https://github.com/actions) for CI/CD
-* 🔲 [docker](https://docker.com) for building containers
-* 🔲 [twine](https://twine.readthedocs.io/en/latest/) for publishing to pypi or private repositories
+* ✔️ [docker](https://docker.com) for building containers
+* ✔️ [twine](https://twine.readthedocs.io/en/latest/) for publishing to pypi or private repositories
 * 🔲 [gcloud](https://cloud.google.com/sdk/gcloud) for publishing to private repositories
 
 ## 📦 Installation
@@ -89,7 +89,7 @@ publish the library to pypi or private repository as well as build the docker im
 docker build -t quantready/quantready-base .
 
 # Run the image
-docker run -it quantready/quantready-base
+docker run -it --rm quantready/quantready-base
 
 # Push the image to docker hub
 docker push quantready/quantready-base
@@ -103,16 +103,18 @@ docker tag quantready/quantready-base gcr.io/<your-project>/quantready-base
 ```bash
 # Build the package
 poetry build
-twine upload dist/*
-
+poetry run twine upload dist/*
 ```
+
+Get `PYPI_API_TOKEN` from <https://pypi.org/manage/account/token/>
+And set it as a github secret <https://github.com/><username>/<repo>/settings/secrets/actions
 
 ### Publish to private repository
 
 ```bash
 # Build the package
 poetry build
-twine upload --repository-url https://pypi.yourdomain.com dist/*
+poetry run twine upload --repository-url https://pypi.yourdomain.com dist/*
 
 ```
 
