@@ -13,7 +13,7 @@ Clean Code:
 
 Deployment:
 
-* 🔲 [github actions](https://github.com/actions) for CI/CD
+* ✔️ [github actions](https://github.com/actions) for CI/CD
 * ✔️ [docker](https://docker.com) for building containers
 * ✔️ [twine](https://twine.readthedocs.io/en/latest/) for publishing to pypi or private repositories
 * 🔲 [gcloud](https://cloud.google.com/sdk/gcloud) for publishing to private repositories
