@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "quantready-base"
-version = "0.1.0"
+version = "0.2.0"
 description = "Publish public or private python libraries - using the modern python stack"
 authors = ["Sean Kruzel <sean@closedloop.tech>"]
 license = "MIT"
