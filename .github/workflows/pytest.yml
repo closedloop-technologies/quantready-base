@@ -60,5 +60,3 @@ jobs:
         run: |
           source .venv/bin/activate
           pytest tests/ --cov=quantready_base
-          coverage report
-              - name: Test with pytest and coverage
