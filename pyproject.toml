@@ -1,11 +1,20 @@
 [tool.poetry]
 name = "quantready-base"
-version = "0.2.0"
+version = "0.2.2"
 description = "Publish public or private python libraries - using the modern python stack"
 authors = ["Sean Kruzel <sean@closedloop.tech>"]
 license = "MIT"
 readme = "README.md"
 packages = [{ include = "quantready_base" }]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.urls]
+"Repository" = "https://github.com/closedloop-technologies/quantready-base"
+"Bug Tracker" = "https://github.com/closedloop-technologies/quantready-base/issues"
 
 [tool.poetry.dependencies]
 python = "^3.10"
